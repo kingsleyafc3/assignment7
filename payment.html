@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script> 
+<style type="text/css">
+  .info{
+        margin: 20px;
+        display: none;
+    }
+
+</style>
+</head>
+<body>
+    <div>
+       Please select payment method: 
+        <label><input type="radio" name="payment" value="credit"> Credit Card</label>
+        <label><input type="radio" name="payment" value="wire"> Wire Transfer</label>
+    </div>
+    <div class="wiretrans info"><br> Transfer the amount to: reg. $957.00, to account 0009286322
+    <input type="submit" name="submit" value="Buy"></div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $('input[type="radio"]').click(function(){
+        if($(this).attr("value")=="credit"){
+            $(".info").not(".credit").hide();
+            $(".credit").show();
+        }
+        if($(this).attr("value")=="wire"){
+            $(".info").not(".wiretrans").hide();
+            $(".wiretrans").show();
+        }
+    });
+});
+</script>
+ <script type="text/javascript">
+                $(document).ready(function () {
+                  $("#card_number").keypress(function (e) {
+                     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+               return false;      
+    }
+   });
+});
+</script>
+<script type="text/javascript">
+                $(document).ready(function () {
+                  $("#exp_month").keypress(function (e) {
+                     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+               return false;      
+    }
+   });
+});
+</script>  
+<script type="text/javascript">
+                $(document).ready(function () {
+                  $("#exp_year").keypress(function (e) { 
+                     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                  
+               return false;      
+    }
+   });
+});
+
+</script>
+   <script type="text/javascript">
+                $(document).ready(function () {
+                  $("#ccvcode").keypress(function (e) {
+                     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                  
+               return false;      
+    }
+   });
+});
+
+</script>
+
+    <div class="credit info">
+        <form>
+           
+                <label for="card_num"> Card Number:</label> 
+                <input type="text" id="card_number" name="cardnumber">
+                <span id="invalid"></span>
+            
+           
+            <br>
+            <br>
+            
+                <label for="expiration">Expiration: </label>
+                <input type="text" id="exp_month" name="exp_month">
+                <input type="text" id="exp_year" name="exp_year">
+                <span id="invalid"></span>
+            <br>
+
+ 
+<br>
+        <label for="ccv_code">
+            3-digit security number: </label><input type="text" style="width: 30px" id="ccvcode" name="securityNum">
+       
+   
+<input type="submit" name="submit" value="Buy">
+<br>
+        </form>
+    </div>
+<a href="deletion.html">Part2</a>
+<a href="informationable.html">Part3</a>
+
+</body>
+</html>                                		

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		.complete{
+    display:none;
+}
+
+.more{
+    background:lightblue;
+    color:navy;
+    font-size:13px;
+    padding:3px;
+    cursor:pointer;
+}
+	</style>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="//code.jquery.com/jquery-3.0.0.min.js"></script>
+<script src="loadmore.js"></script>
+	<script type="text/javascript">
+		$(".more").toggle(function(){
+    $(this).text("less..").siblings(".complete").show();    
+}, function(){
+    $(this).text("more..").siblings(".complete").hide();    
+});
+	</script>
+</head>
+<body>
+<span class="teaser">Click for more informaiton</span>
+
+<span class="complete"> This is brand new informaiton</span>
+
+<span class="more">more...</span>
+ <a href="payment.html">Part 1</a>
+<a href="remove.html">Part 2</a>
+
+</body>
+</html>
